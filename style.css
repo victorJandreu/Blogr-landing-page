@@ -15,8 +15,14 @@
     --pading-mas-pading-text: 2.3rem
 }
 
+
+
 *{
     box-sizing: border-box;
+}
+
+.burger{
+    cursor: pointer;
 }
 
 .idex3{
@@ -52,6 +58,12 @@ header{
 
 header div{
     position: relative;
+}
+
+.header-a {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .header-nav-container{
@@ -293,12 +305,13 @@ img{
 
 .header-nav div ul{
     width: 100%;
-    background-color: var(--grayish-blue);
+    background-color: hsla(240, 3%, 79%, 0.566);
+   
 }
 
 
 hr{
-    border: 1px solid red;
+    border: 1px solid var(--grayish-blue);
     width: 100%;
 }
 
@@ -309,6 +322,14 @@ ul{
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+header a{
+    color: var(--very-dark-black-blue);
+}
+
+nav [data-nav] a:hover{
+    font-weight: 800;
 }
 
 a{
@@ -338,19 +359,40 @@ button, a{
 }
 
 
+footer a:hover{
+    text-decoration: underline;
+}
 
 
 
 
 
+#start:hover{
+    background-color: var(--very-light-red);
+    color: var(--white);
+    border: none;
+}
+#learn:hover{
+    background-color: var(--white);
+    color: var(--light-red);
+    border: none;
+}
 
-
-
-
-
+#sing-up{
+    background: linear-gradient(to right, var(--graidient-header-nav));
+    align-self: center;
+    padding: .5rem 2rem;
+    border-radius: 30px;
+    color: var(--white);
+}
 
 
 @media (min-width: 700px) {
+
+    .header-a {
+        flex-direction: row;
+        gap: 0;
+    }
     .desk{
         display: block;
     }
@@ -358,7 +400,11 @@ button, a{
         display: none;
     }
 
-
+    #sing-up:hover{
+        background-color: var(--very-light-red);
+        color: var(--white);
+        border: none;
+    }
 
 
     .notDispayheader{
@@ -390,7 +436,6 @@ button, a{
 
     .header-nav-container {
        justify-content: flex-start;
-       
         width: 100%;
         position: relative;
         z-index: 50;
@@ -416,8 +461,6 @@ button, a{
         position: absolute;
         top: 20px;
         padding: 1rem;
-     
-        
         border-radius: 5px;
         box-shadow: 0px 0px 5px var(--very-dark-black-blue);
     }
@@ -462,16 +505,12 @@ button, a{
    #sing-up{
         display: block;
         padding: .7rem 2rem;
-        background-color: var(--white);
+        background: var(--white);
         border-radius: 30px;
         color: var(--light-red);
         font-weight: 800;
     }
-    #sing-up:hover, #start:hover{
-        background-color: var(--very-light-red);
-        color: var(--white);
-        border: none;
-    }
+    
 
     /* main */
 
@@ -596,6 +635,20 @@ button, a{
         max-width: 650px;
     }
 
+    /* footer */
+    footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    footer ul{
+        margin-top: 2rem;
+    }
+
+   
   }
 
 
